@@ -4,12 +4,13 @@ function main_styles(){
     // Adding stylesheets
 
     // Main stylesheets
-    wp_register_style('style', get_template_directory_uri() . 'style/main.css', array(), '1.0' );
+    wp_register_style('style', get_template_directory_uri() . '/style/main.css', array(), '1.0' );
     
     // Normalize stylesheets
-    wp_register_style('normalize', get_template_directory_uri() . 'lib/css/normalize.min.css', array(), '1.0' );
+    wp_register_style('normalize', get_template_directory_uri() . '/lib/css/normalize.min.css', array(), '1.0' );
     
     // Enqueue the styles
+    wp_enqueue_style('normalize');
     wp_enqueue_style('style');
 
 

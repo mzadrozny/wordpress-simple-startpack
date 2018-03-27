@@ -19,12 +19,14 @@ function simple_setup(){
 add_action('after_setup_theme', 'simple_setup');
 
 
-//Add Menus
+//Add Menu
 
-    function main_menu(){
-        register_nav_menu(array(
-            'main-menu' => __('Header Menu', 'simple_theme')
+    function main_menus(){
+        register_nav_menus(array(
+            // You can have one main menu, or special menu for mobile 
+            'main-menu' => __('Main Menu', 'simple-theme'),
+            'mobile-menu' => __('Mobile Menu', 'simple-theme')
         ));
     }
 
-	add_action('init', 'main_menu');
+	add_action('init', 'main_menus');
