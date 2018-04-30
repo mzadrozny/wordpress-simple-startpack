@@ -69,3 +69,5 @@ function single_context($file) {
 }
 
 add_filter('single_template', 'single_context');
+
+add_theme_support( 'post-thumbnails' );
